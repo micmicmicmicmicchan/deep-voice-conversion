@@ -165,13 +165,15 @@ def _get_mfcc_and_spec(wav, preemphasis_coeff, n_fft, win_length, hop_length):
     # (t, n_mfccs), (t, 1+n_fft/2), (t, n_mels)
     return mfccs.T, mag_db.T, mel_db.T
 
-#spanish phonemes
-phns = ['_', 'e', 'n', 'r', 'o', 'u', 's', 't', 'j', 'k', 'b', 'th', 'i', 'd', 'p', 'l', 'm', 'a', 'g', 'jj', 'rr', 'w', 'll', 'ch', 'f', 'nj', 'x']
-#phns = ['h#', 'aa', 'ae', 'ah', 'ao', 'aw', 'ax', 'ax-h', 'axr', 'ay', 'b', 'bcl',
-#        'ch', 'd', 'dcl', 'dh', 'dx', 'eh', 'el', 'em', 'en', 'eng', 'epi',
-#        'er', 'ey', 'f', 'g', 'gcl', 'hh', 'hv', 'ih', 'ix', 'iy', 'jh',
-#        'k', 'kcl', 'l', 'm', 'n', 'ng', 'nx', 'ow', 'oy', 'p', 'pau', 'pcl',
-#        'q', 'r', 's', 'sh', 't', 'tcl', 'th', 'uh', 'uw', 'ux', 'v', 'w', 'y', 'z', 'zh']
+#spanish phonemes _ means silence
+#phns = ['_', 'e', 'n', 'r', 'o', 'u', 's', 't', 'j', 'k', 'b', 'th', 'i', 'd', 'p', 'l', 'm', 'a', 'g', 'jj', 'rr', 'w', 'll', 'ch', 'f', 'nj', 'x']
+
+#english phonemes
+phns = ['h#', 'aa', 'ae', 'ah', 'ao', 'aw', 'ax', 'ax-h', 'axr', 'ay', 'b', 'bcl',
+        'ch', 'd', 'dcl', 'dh', 'dx', 'eh', 'el', 'em', 'en', 'eng', 'epi',
+        'er', 'ey', 'f', 'g', 'gcl', 'hh', 'hv', 'ih', 'ix', 'iy', 'jh',
+        'k', 'kcl', 'l', 'm', 'n', 'ng', 'nx', 'ow', 'oy', 'p', 'pau', 'pcl',
+        'q', 'r', 's', 'sh', 't', 'tcl', 'th', 'uh', 'uw', 'ux', 'v', 'w', 'y', 'z', 'zh']
 
 
 def load_vocab():
