@@ -40,7 +40,7 @@ class Default:
 
 class Train1:
     # path
-    data_path = 'Data/Train/*.wav'
+    data_path = 'datasets/arctic/slt/*.wav'
 
     # model
     hidden_units = 128  # alias = E
@@ -61,7 +61,7 @@ class Train1:
 
 class Train2:
     # path
-    data_path = 'Data/Train/Target/*.wav'
+    data_path = 'datasets/arctic/bld/*.wav'
 
     # model
     hidden_units = 256  # alias = E
